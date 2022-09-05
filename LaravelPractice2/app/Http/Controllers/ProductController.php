@@ -55,6 +55,10 @@ class ProductController extends Controller
             'discount' => $dicount
         ]);
 
-        return redirect('/catalog');
+        return redirect('/adminsite');
+    }
+
+    public function add_to_cart(Request $request){
+        return "909090";
     }
 }

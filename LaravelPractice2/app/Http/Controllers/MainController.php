@@ -21,4 +21,8 @@ class MainController extends Controller
     public function adminsite(Request $request){
         return view('adminsite');
     }
+
+    public function shopping_cart(Request $request){
+        return view('shopping_cart');
+    }
 }

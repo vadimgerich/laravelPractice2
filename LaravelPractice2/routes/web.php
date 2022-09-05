@@ -39,3 +39,7 @@ Route::get('/adminsite', [MainController::class, 'adminsite'])->name('adminsite'
 Route::get('/add_new_product', [AdminsiteController::class, 'add_new_product'])->name('add_new_product');
 
 Route::post('/doadd_product', [ProductController::class, 'doadd_product'])->name('doadd_product');
+
+Route::get('/shopping_cart', [MainController::class, 'shopping_cart'])->name('shopping_cart');
+
+Route::get('/add_to_cart', [ProductController::class, 'add_to_cart'])->name('add_to_cart');
