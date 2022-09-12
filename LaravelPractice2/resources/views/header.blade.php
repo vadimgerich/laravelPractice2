@@ -16,6 +16,7 @@
             <a href="{{route('login')}}" class="btn btn-outline-primary me-2">Login</a>
             <a href="{{route('registration')}}" class="btn btn-primary">Sign-up</a> &nbsp;
         @else
+            <h1>{{session('user_id')}}</h1>
             <a href="{{route('shopping_cart')}}" class="fa fa-shopping-cart"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="{{route('logout')}}" class="btn btn-outline-primary me-2">Logout</a>
         @endif

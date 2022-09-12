@@ -61,7 +61,7 @@
                                             <button
                                                 type="button"
                                                 class="btn btn-danger flex-fill ms-1 col-md-12 add_to_cart"
-                                                data-id="{{$product->id}}">
+                                                data-product_id="{{$product->id}}">
                                                     Add to cart
                                             </button>
                                         </div>

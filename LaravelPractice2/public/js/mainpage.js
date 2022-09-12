@@ -6,10 +6,16 @@ $(document).ready(function(){
             url: '/add_to_cart',
             type : 'GET',
             data: {
-                id : $(this).data('id')
+                id : $(this).data('product_id'),
+                product_count: 1
             },
             success:function (){
+                var cookie = document.cookie.match('user_id');
+                alert(cookie);
                 alert("product added succesfully!");
+            },
+            error:function (error){
+                alert(error);
             }
         })
 

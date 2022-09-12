@@ -59,6 +59,19 @@ class ProductController extends Controller
     }
 
     public function add_to_cart(Request $request){
-        return "909090";
+        if(session()->has('user_id') && session()->get('user_id')!==''){
+            $user_id = session()->get('user_id');
+        }else{
+            $user_id = uniqid();
+            $request->cookie('user_id',$user_id);
+        }
+
+//        DB::table('carts')
+//            ->insert([
+//                'user_id'=>$user_id,
+//                'product_id'=>$request->get('product_id'),
+//                'product_count'=>session('product_count')]
+//            );
+//        return die('ok');
     }
 }
